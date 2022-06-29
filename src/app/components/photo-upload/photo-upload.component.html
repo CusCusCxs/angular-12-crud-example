@@ -1,0 +1,15 @@
+<body>
+    <h1>Upload new Photo</h1>
+    
+        Title:<input type="text" name="title" />
+        Image:<input type="file" name="image" accept="image/*" />
+        <button (click)="savePhoto()" class="btn btn-success">Upload</button>
+
+    </body>
+    <html>
+<body>
+    <h1>View Photo</h1>
+    Title: <span th:text="${title}">name</span>
+    <img alt="sample" th:src="*{'data:image/png;base64,'+image}" />
+</body>
+</html>
